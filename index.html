@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Mustache.js Inline Method</title>
+      <script type="text/javascript" src="./mustache.js"></script>
+
+  </head>
+  <body>
+    <div id="counter">
+      <script id="counter-template" type="text/template">
+          {{people}}
+      </script>
+    </div>
+
+    <input placeholder="name" type="text"></input>
+    <button id="addPerson">Add</button>
+    <div id="people">
+      <script id="listPerson-template" type="text/template">
+          {{#people}}
+            <li>
+              <span>{{.}}</span>
+                <i class="del">X</i>
+            </li>
+          {{/people}}
+      </script>
+    </div>
+  </body>
+
+  <script type="text/javascript" src="./pubsub.js"></script>
+  <script type="text/javascript" src="./counter.js"></script>
+  <script type="text/javascript" src="./main.js"></script>
+
+
+
+</html>
